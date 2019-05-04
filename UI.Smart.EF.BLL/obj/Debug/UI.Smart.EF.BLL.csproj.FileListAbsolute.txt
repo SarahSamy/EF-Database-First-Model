@@ -1,0 +1,14 @@
+D:\ITI\Entity FrameWork\lab1\UI.Smart.EF.Lab1\UI.Smart.EF.BLL\bin\Debug\UI.Smart.EF.BLL.dll
+D:\ITI\Entity FrameWork\lab1\UI.Smart.EF.Lab1\UI.Smart.EF.BLL\bin\Debug\UI.Smart.EF.BLL.pdb
+D:\ITI\Entity FrameWork\lab1\UI.Smart.EF.Lab1\UI.Smart.EF.BLL\obj\Debug\UI.Smart.EF.BLL.csprojResolveAssemblyReference.cache
+D:\ITI\Entity FrameWork\lab1\UI.Smart.EF.Lab1\UI.Smart.EF.BLL\obj\Debug\UI.Smart.EF.BLL.dll
+D:\ITI\Entity FrameWork\lab1\UI.Smart.EF.Lab1\UI.Smart.EF.BLL\obj\Debug\UI.Smart.EF.BLL.pdb
+D:\ITI\Entity FrameWork\lab1\UI.Smart.EF.Lab1\UI.Smart.EF.BLL\bin\Debug\UI.Smart.EF.BLL.dll.config
+D:\ITI\Entity FrameWork\lab1\UI.Smart.EF.Lab1\UI.Smart.EF.BLL\bin\Debug\EntityFramework.dll
+D:\ITI\Entity FrameWork\lab1\UI.Smart.EF.Lab1\UI.Smart.EF.BLL\bin\Debug\EntityFramework.SqlServer.dll
+D:\ITI\Entity FrameWork\lab1\UI.Smart.EF.Lab1\UI.Smart.EF.BLL\bin\Debug\Models.dll
+D:\ITI\Entity FrameWork\lab1\UI.Smart.EF.Lab1\UI.Smart.EF.BLL\bin\Debug\UI.Smart.EF.Repository.dll
+D:\ITI\Entity FrameWork\lab1\UI.Smart.EF.Lab1\UI.Smart.EF.BLL\bin\Debug\Models.pdb
+D:\ITI\Entity FrameWork\lab1\UI.Smart.EF.Lab1\UI.Smart.EF.BLL\bin\Debug\UI.Smart.EF.Repository.pdb
+D:\ITI\Entity FrameWork\lab1\UI.Smart.EF.Lab1\UI.Smart.EF.BLL\bin\Debug\EntityFramework.xml
+D:\ITI\Entity FrameWork\lab1\UI.Smart.EF.Lab1\UI.Smart.EF.BLL\bin\Debug\EntityFramework.SqlServer.xml

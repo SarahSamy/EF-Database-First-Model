@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UI.Smart.EFModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="City1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Fk_Country" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="Int32" />
+    <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UserVisits" Relationship="Self.FK_UserVisits_User" FromRole="User" ToRole="UserVisits" />
+  </EntityType>
+  <EntityType Name="UserVisit">
+    <Key>
+      <PropertyRef Name="User_Id" />
+      <PropertyRef Name="City_Id" />
+    </Key>
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="City_Id" Type="Int32" Nullable="false" />
+    <Property Name="When" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="User" Relationship="Self.FK_UserVisits_User" FromRole="UserVisits" ToRole="User" />
+  </EntityType>
+  <Association Name="FK_UserVisits_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UserVisits" Type="Self.UserVisit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserVisits">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="City1" EntityType="Self.City1" />
+    <EntitySet Name="Countries" EntityType="Self.Country" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="UserVisits" EntityType="Self.UserVisit" />
+    <AssociationSet Name="FK_UserVisits_User" Association="Self.FK_UserVisits_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserVisits" EntitySet="UserVisits" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
